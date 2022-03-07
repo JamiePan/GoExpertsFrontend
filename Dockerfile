@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx
 # The image needs nginx to run on aws
 
-EXPOSE 443
+EXPOSE 80
 #Nginx runs on port 80, so elastic beanstalk uses the expose command to expose this port
 
 COPY --from=builder /app/build /usr/share/nginx/html
